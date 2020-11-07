@@ -4,15 +4,15 @@ import "firebase/firestore";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyBR75bEhh0JWjZ7dJlnuOGRVs3R5UXBXbw",
-    authDomain: "parcial3dps-cf7cc.firebaseapp.com",
-    databaseURL: "https://parcial3dps-cf7cc.firebaseio.com",
-    projectId: "parcial3dps-cf7cc",
-    storageBucket: "parcial3dps-cf7cc.appspot.com",
-    messagingSenderId: "767797577047",
-    appId: "1:767797577047:web:ea66270e815c10f5496a12",
-    measurementId: "G-9YPYR0Y0XS"
-  };
+  apiKey: "AIzaSyBR75bEhh0JWjZ7dJlnuOGRVs3R5UXBXbw",
+  authDomain: "parcial3dps-cf7cc.firebaseapp.com",
+  databaseURL: "https://parcial3dps-cf7cc.firebaseio.com",
+  projectId: "parcial3dps-cf7cc",
+  storageBucket: "parcial3dps-cf7cc.appspot.com",
+  messagingSenderId: "767797577047",
+  appId: "1:767797577047:web:ea66270e815c10f5496a12",
+  measurementId: "G-9YPYR0Y0XS"
+};
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
