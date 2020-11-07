@@ -21,7 +21,9 @@ const ProfilePage = () => {
   };
 
   return (
+
     <div>
+    
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark float-right w-100">
         <button
           class="navbar-toggler"
@@ -36,7 +38,7 @@ const ProfilePage = () => {
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
-            <li class="active nav-item font-weight-bold m-3">
+            <li class="nav-item font-weight-bold m-3">
               <Link to="/" class="nav-link">Inicio</Link>
             </li>
             <li class="nav-item font-weight-bold m-3">
@@ -71,17 +73,9 @@ const ProfilePage = () => {
         </div>
       </nav>
 
-      <Router>
-        <Info exact path="info" />
-        <Contacto exact path="contacto" />
-        <Help exact path="help" />
-        <User exact path="user" />
-      </Router>
-
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <span className="float-right">
+      <div className="container shadow-lg ronded p-5">
+        <div className="row justify-content-center">
+          <div className="col-4 mt-4">
               <div
                 style={{
                   background: `url(${
@@ -93,15 +87,34 @@ const ProfilePage = () => {
                   width: "100px",
                 }}
                 className="border border-blue-300"
-              ></div>
-              <br></br>
-              Nombre : <h2 className="text-2xl font-semibold">{displayName}</h2>
-              <br></br>
-              Correo: <h3 className="italic">{email}</h3>
-            </span>
-          </div>
+              ></div></div>
+              <div className="col-4 mt-4">
+              <label class="font-weight-bold mt-2">Nombre :</label> <h3 className="italic my-2">{displayName}</h3></div>
+              <div className="col-4 mt-4">
+              <label class="font-weight-bold mt-2">Correo :</label> <h3 className="italic my-2">{email}</h3></div>
         </div>
       </div>
+
+      <div className="container shadow-lg ronded py-4 px-5">
+        <div className="row">
+      <div className="col-md-12"> 
+      <button type="button" class="btn btn-success btn-lg btn-block font-weight-bold">CALCULAR PAGO DE EMPLEADOS</button>
+      </div>
+      </div>
+        </div>
+
+      <div className="container pt-5">
+        <div className="row">
+      <div className="col-md-12"> 
+      <Router>
+        <Info exact path="info" />
+        <Contacto exact path="contacto" />
+        <Help exact path="help" />
+        <User exact path="user" />
+      </Router>
+      </div>
+      </div>
+        </div>
     </div>
   );
 };
