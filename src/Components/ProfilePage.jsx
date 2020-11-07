@@ -75,7 +75,7 @@ const ProfilePage = () => {
 
       <div className="container shadow-lg ronded p-5">
         <div className="row justify-content-center">
-          <div className="col-4 mt-4">
+          <div className="col-lg-4 col-md-12 col-sm-12 mt-4">
               <div
                 style={{
                   background: `url(${
@@ -88,9 +88,9 @@ const ProfilePage = () => {
                 }}
                 className="border border-blue-300"
               ></div></div>
-              <div className="col-4 mt-4">
+              <div className="col-lg-4 col-md-12 col-sm-12 mt-4">
               <label class="font-weight-bold mt-2">Nombre :</label> <h3 className="italic my-2">{displayName}</h3></div>
-              <div className="col-4 mt-4">
+              <div className="col-lg-4 col-md-12 col-sm-12 mt-4">
               <label class="font-weight-bold mt-2">Correo :</label> <h3 className="italic my-2">{email}</h3></div>
         </div>
       </div>
