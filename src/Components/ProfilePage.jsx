@@ -5,8 +5,10 @@ import { Router, Link } from "@reach/router";
 
 import Info from "./Home/Info";
 import Contacto from "./Home/Contacto";
-import Help from "./Home/Help";
-import User from "./Home/User";
+import Ayuda from "./Home/Ayuda";
+import Inicio from "./Home/Inicio";
+import Empleados from "./Home/Empleados";
+import Planilla from "./Home/Planilla";
 
 const ProfilePage = () => {
   // Asigna un user para leer el contexto del tema actual.
@@ -38,8 +40,20 @@ const ProfilePage = () => {
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
+          <li class="nav-item font-weight-bold m-3">
+              <Link class="nav-link" to="inicio">
+                Inicio
+              </Link>
+            </li>
             <li class="nav-item font-weight-bold m-3">
-              <Link to="/" class="nav-link">Inicio</Link>
+              <Link to="empleados" class="nav-link">
+              Empleados
+              </Link>
+            </li>
+            <li class="nav-item font-weight-bold m-3">
+              <Link to="planilla" class="nav-link">
+              Planilla
+              </Link>
             </li>
             <li class="nav-item font-weight-bold m-3">
               <Link class="nav-link" to="info">
@@ -52,13 +66,8 @@ const ProfilePage = () => {
               </Link>
             </li>
             <li class="nav-item font-weight-bold m-3">
-              <Link class="nav-link" to="user">
-                User
-              </Link>
-            </li>
-            <li class="nav-item font-weight-bold m-3">
-              <Link class="nav-link" to="help">
-                Help
+              <Link class="nav-link" to="ayuda">
+                Ayuda
               </Link>
             </li>
             <button
@@ -95,22 +104,16 @@ const ProfilePage = () => {
         </div>
       </div>
 
-      <div className="container shadow-lg ronded py-4 px-5">
-        <div className="row">
-      <div className="col-md-12"> 
-      <button type="button" class="btn btn-success btn-lg btn-block font-weight-bold">CALCULAR PAGO DE EMPLEADOS</button>
-      </div>
-      </div>
-        </div>
-
       <div className="container pt-5">
         <div className="row">
       <div className="col-md-12"> 
       <Router>
         <Info exact path="info" />
         <Contacto exact path="contacto" />
-        <Help exact path="help" />
-        <User exact path="user" />
+        <Ayuda exact path="ayuda" />
+        <Inicio exact path="inicio" />
+        <Empleados exact path="empleados" />
+        <Planilla exact path="planilla" />
       </Router>
       </div>
       </div>

@@ -1,8 +1,8 @@
 import React from "react"
 
-const Help = () => (
+const Ayuda = () => (
   <React.Fragment>
-    <h3 class="text-center italic">Pagina de ayuda</h3>
+    <h3 class="text-center italic">Necesitas Ayuda...?</h3>
     <br />
     <h4 class="text-center text-secondary pb-2 mb-4 border-bottom">Como funciona nuestro sitio web?</h4>
     <h6 class="text-center">Calcular el pago líquido de tres empleados, según las siguientes instrucciones:</h6><br />
@@ -45,4 +45,4 @@ siguientes:
   </React.Fragment>
 )
 
-export default Help
+export default Ayuda
