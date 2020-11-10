@@ -39,7 +39,7 @@ const PasswordReset = () => {
           <form action="" className="mt-3 px-5 pt-4">
             {emailHasBeenSent && (
               <div className="alert alert-success">
-                Por favor revisar su correo electronico
+                Solicitud aceptada, revise su correo electronico para el reestablecimiento de su contraseña
               </div>
             )}
             {error !== null && (
