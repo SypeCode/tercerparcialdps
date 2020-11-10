@@ -20,6 +20,7 @@ const ProfilePage = () => {
 
   const signOut = () => {
     auth.signOut();
+    window.location = '/'; 
   };
 
   return (
