@@ -7,7 +7,6 @@ import Info from "./Home/Info";
 import Contacto from "./Home/Contacto";
 import Ayuda from "./Home/Ayuda";
 import Inicio from "./Home/Inicio";
-import Empleados from "./Home/Empleados";
 import Planilla from "./Home/Planilla";
 
 const ProfilePage = () => {
