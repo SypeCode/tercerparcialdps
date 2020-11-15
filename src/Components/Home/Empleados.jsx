@@ -1,48 +1,93 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { db } from "../../firebase";
 
-const Empleados = () => (
-  <React.Fragment>
-    <div class="container mb-5 py-5 z-depth-1">
-      <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-6">
-            <form class="text-center" action="">
-              <h3 class="font-weight-bold mb-5">Datos del Empleado</h3>
 
-              <div class="form-row mb-4">
-                <div class="col">
-                  <input
-                    type="text"
-                    id="id"
-                    class="form-control"
-                    placeholder="ID empleado"
-                  />
-                </div>
-                <div class="col">
-                  <input
-                    type="text"
-                    id="nombre"
-                    class="form-control"
-                    placeholder="Nombre Empleado"
-                  />
-                </div>
-              </div>
+const Formulario = (props) => {
+  const initialStateValues = {
+    empleado: "",
+    name: "",
+    horas: "",
+  };
 
-              <input
-                type="text"
-                id="horas"
-                class="form-control mb-4"
-                placeholder="Horas Trabajadas"
-              />
+  const [values, setValues] = useState(initialStateValues);
 
-              <button class="btn btn-info my-4 btn-lg" type="submit">
-                Registrar
-              </button>
-            </form>
-          </div>
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setValues({ ...values, [name]: value });
+  };
+
+  
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+
+    props.AgregarOeditarEmpleado(values);
+    setValues({ ...initialStateValues });
+  };
+
+  const getLinkById = async (id) => {
+    const doc = await db.collection("Empleados").doc(id).get();
+    setValues({ ...doc.data() });
+  };
+
+  useEffect(() => {
+    if (props.currentId === "") {
+      setValues({ ...initialStateValues });
+    } else {
+      getLinkById(props.currentId);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.currentId]);
+
+  return (
+    <form onSubmit={handleSubmit} className="card card-body border-primary">
+      <div className="form-group input-group">
+        <div className="input-group-text bg-light">
+          <i >Empleado</i>
         </div>
-      </section>
-    </div>
-  </React.Fragment>
-);
-export default Empleados;
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Empleado"
+          value={values.empleado}
+          name="empleado"
+          onChange={handleInputChange}
+        />
+      </div>
+      <div className="form-group input-group">
+        <div className="input-group-text bg-light">
+          <i >ID Empleado</i>
+        </div>
+        <input
+          type="text"
+          value={values.name}
+          name="name"
+          placeholder="ID Empleado"
+          className="form-control"
+          onChange={handleInputChange}
+        />
+      </div>
+      <div className="form-group input-group">
+        <div className="input-group-text bg-light">
+          <i >Horas trabajadas</i>
+        </div>
+        <input
+          type="number"
+          value={values.horas}
+          name="horas"
+          placeholder="Horas trabajadas"
+          className="form-control"
+          onChange={handleInputChange}
+        />
+      </div>
+
+
+      <button className="btn btn-primary btn-block">
+        {props.currentId === "" ? "Registrar" : "Actualizar"}
+      </button>
+    </form>
+  );
+};
+
+export default Formulario;
