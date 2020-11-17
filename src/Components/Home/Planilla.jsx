@@ -19,7 +19,7 @@ const Empleados = () => {
   };
   //Calculo de sueldo
   const calculo = () =>{
-
+    
   }
   //borrar empleado
   const BorrarEmpleado = async (id) => {
@@ -83,8 +83,12 @@ const Empleados = () => {
               </div>
               <p>ID: {Empleado.name}</p>
               <p>HORAS: {Empleado.horas}</p>
+              <p>ISSS: ${Empleado.ISSS}</p>
+              <p>AFP: ${Empleado.AFP}</p>
+              <p>RENTA: ${Empleado.RENTA}</p>
+              <p>SUELDO LIQUIDO: ${Empleado.SueldoLiquido}</p>
+              <p>SUELDO NETO: ${Empleado.SueldoNeto}</p>
             </div>
-            <button className="btn btn-primary " onClick={calculo()}>CALCULAR </button>
           </div>
         ))}
       </div>

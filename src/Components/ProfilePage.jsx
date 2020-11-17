@@ -8,6 +8,7 @@ import Contacto from "./Home/Contacto";
 import Ayuda from "./Home/Ayuda";
 import Inicio from "./Home/Inicio";
 import Planilla from "./Home/Planilla";
+import Empleados from "./Home/Empleados";
 
 const ProfilePage = () => {
   // Asigna un user para leer el contexto del tema actual.

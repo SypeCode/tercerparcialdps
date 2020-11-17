@@ -5,13 +5,14 @@ import "firebase/firestore";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 //cambiar credenciales 
 const firebaseConfig = {
-  apiKey: "AIzaSyACyvP-nsfrqadscOcLOV3ixZN7497QsCc",
-  authDomain: "desafio3udb.firebaseapp.com",
-  databaseURL: "https://desafio3udb.firebaseio.com",
-  projectId: "desafio3udb",
-  storageBucket: "desafio3udb.appspot.com",
-  messagingSenderId: "472631146914",
-  appId: "1:472631146914:web:4ebf615af7969eb9045afb"
+  apiKey: "AIzaSyBR75bEhh0JWjZ7dJlnuOGRVs3R5UXBXbw",
+  authDomain: "parcial3dps-cf7cc.firebaseapp.com",
+  databaseURL: "https://parcial3dps-cf7cc.firebaseio.com",
+  projectId: "parcial3dps-cf7cc",
+  storageBucket: "parcial3dps-cf7cc.appspot.com",
+  messagingSenderId: "767797577047",
+  appId: "1:767797577047:web:ea66270e815c10f5496a12",
+  measurementId: "G-9YPYR0Y0XS"
 };
 
 // Initialize Firebase
