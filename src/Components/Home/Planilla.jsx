@@ -58,10 +58,10 @@ const Empleados = () => {
 
   return (
     <>
-      <div className="col-md-8 p-2  ">
+      <div className="col-12 py-2 px-5">
         <Formulario {...{ AgregarOeditarEmpleado, currentId, Empleados }} />
       </div>
-      <div className="col-md-8 p-2">
+      <div className="col-12 py-2 px-5">
         {Empleados.map((Empleado) => (
           <div className="card mb-1" key={Empleado.id}>
             <div className="card-body">
