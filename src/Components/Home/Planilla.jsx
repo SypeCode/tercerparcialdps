@@ -9,7 +9,7 @@ const Empleados = () => {
   const [currentId, setCurrentId] = useState("");
  //Obetener datos
   const getEmpleados = async () => {
-    db.collection("Empleados").onSnapshot((querySnapshot) => {
+    db.collection("Empleados").orderBy('SueldoLiquido', 'desc').onSnapshot((querySnapshot) => {
       const docs = [];
       querySnapshot.forEach((doc) => {
         docs.push({ ...doc.data(), id: doc.id });
@@ -61,6 +61,7 @@ const Empleados = () => {
       <div className="col-md-8 p-2  ">
         <Formulario {...{ AgregarOeditarEmpleado, currentId, Empleados }} />
       </div>
+      <h1>Planilla De Mayor A Menor Salario</h1>
       <div className="col-md-8 p-2">
         {Empleados.map((Empleado) => (
           <div className="card mb-1" key={Empleado.id}>
