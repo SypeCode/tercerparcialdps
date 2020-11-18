@@ -38,6 +38,7 @@ const Empleados = () => {
 //AGREGAR Y EDITAR CRUD
   const AgregarOeditarEmpleado = async (ObjetoEmpleado) => {
     try {
+      
       if (currentId === "") {
         await db.collection("Empleados").doc().set(ObjetoEmpleado);
         toast("Nuevo Empleado agregado", {

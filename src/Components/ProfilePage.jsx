@@ -46,11 +46,7 @@ const ProfilePage = () => {
                 Inicio
               </Link>
             </li>
-            <li class="nav-item font-weight-bold m-3">
-              <Link to="empleados" class="nav-link">
-              Empleados
-              </Link>
-            </li>
+            
             <li class="nav-item font-weight-bold m-3">
               <Link to="planilla" class="nav-link">
               Planilla
