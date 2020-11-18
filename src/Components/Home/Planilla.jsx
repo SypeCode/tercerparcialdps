@@ -9,7 +9,7 @@ const Empleados = () => {
   const [currentId, setCurrentId] = useState("");
  //Obetener datos
   const getEmpleados = async () => {
-    db.collection("Empleados").onSnapshot((querySnapshot) => {
+    db.collection("Empleados").orderBy('SueldoLiquido', 'desc').onSnapshot((querySnapshot) => {
       const docs = [];
       querySnapshot.forEach((doc) => {
         docs.push({ ...doc.data(), id: doc.id });
